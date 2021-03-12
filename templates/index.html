@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'navbar.html' %}
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet"type="text/css" href="{% static 'css/stylesheet.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<div class="container">
+    <img src= "{% static 'images\truck2.jpeg' %}">
+
+</div>
+
+<body>
+
+  <br><br>
+  <div class="container">
+      <form action="team" method="post">
+    {% csrf_token %}
+<input type="submit" value="Team" name="team" class="btn btn-primary">
+      </form>
+  &nbsp;&nbsp;
+   <form action="trucker" method="post">
+<input type="submit" value="Trucker" class="btn btn-primary">
+</form><br><br>
+
+  </div>
+
+
+
+</body>
+</html>
